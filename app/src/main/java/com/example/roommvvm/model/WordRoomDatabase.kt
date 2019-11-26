@@ -13,13 +13,11 @@ abstract class WordRoomDatabase :RoomDatabase(){
     private lateinit var database: WordRoomDatabase
 
         fun init(context: Context){
-
           synchronized(this){
                 database =Room.databaseBuilder(context.applicationContext,
                 WordRoomDatabase::class.java,"word_database").build()
            }
         }
-
         fun getDataBase()= database
     }
 }
